@@ -1,0 +1,173 @@
+/* ---------------------------------------------------------------------------- */
+/* --- 2. BASICS
+/* ----------------------------------------------------------------------------- */
+
+	.relative { position: relative; z-index: 2; }
+	.block { display: block; } 
+
+	.dark { color: #fff; }
+
+	$posLoopRange: 40;
+	$posTypes: margin, padding;
+	$posTypesShortcuts: m, p;
+	$posDirections: top, right, bottom, left;
+	$posDirectionsShortcuts: t, r, b, l;
+	$mediaTypes: 
+		"(min-width: 1200px)",
+		"(max-width: 1199px) and (min-width: 992px)",
+		"(max-width: 991px) and (min-width: 768px)",
+		"(max-width: 767px)";
+
+	@for $i from 1 through length($posTypes) {
+		$type: nth($posTypes,$i);
+		$typeShortcut: nth($posTypesShortcuts,$i);
+
+		@for $j from 1 through length($posDirections)+1 {
+
+			$direction: null;
+			$directionShortcut: null;
+
+			@if $j<=length($posDirections) {
+
+				$direction: -#{nth($posDirections,$j)};
+				$directionShortcut: nth($posDirectionsShortcuts,$j);
+
+			}
+	
+			@for $k from 0 through $posLoopRange {
+				$value: $k*5;
+			    .#{$typeShortcut}#{$directionShortcut}-#{$value} {
+			   		#{$type}#{$direction}: #{$value}px !important;
+			    }
+			}
+
+		}
+	}
+
+	.h-100 { height: 100px; }
+	.h-200 { height: 200px; }
+	.h-300 { height: 300px; }
+	.h-400 { height: 400px; }
+	.h-500 { height: 500px; }
+	.h-600 { height: 600px; }
+	.h-700 { height: 700px; }
+	.h-800 { height: 800px; }
+	.h-900 { height: 900px; }
+
+	.h-sm { height: 40vh; }
+	.h-md { height: 60vh; }
+	.h-lg { height: 80vh; }
+	.fullheight { height: 100vh; }
+	.min-fullheight { min-height: 100vh; }
+
+	.sep-line {
+		position: relative;
+		z-index: 1;
+		display: block;
+		height: 1px;
+		border: none;
+		margin: 40px 0;
+		background: rgba(0,0,0,0.05);
+	}
+
+	.font-secondary {
+		font-family: $font-secondary;
+	}
+
+	.border { border: 1px solid $color-line-dark; }
+	.dark .border { border: 1px solid $color-line-light; }
+
+	.border-top { border-top: 1px solid $color-line-dark; }
+	.dark .border-top, .dark.border-top { border-top: 1px solid $color-line-light; }
+
+	.border-bottom { border-bottom: 1px solid $color-line-dark; }
+	.dark .border-bottom, .dark.border-bottom { border-bottom: 1px solid $color-line-light; }
+
+	.dark .sep-line { background: rgba(255,255,255,0.2); }
+
+	.v-center {
+		position: relative;
+		top: 50%;
+		@include translate3d(0,-50%,0);
+		@include transition(all 0.3s ease-out)
+	}
+
+	.v-bottom {
+		position: relative;
+		top: 95%;
+		@include translate3d(0,-100%,0);
+		@include transition(all 0.3s ease-out)
+	}
+
+	.v-center-items {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flexbox;
+		display: flex;
+		@include align-items(center);
+		@include flex-direction(row);
+	}
+
+	.animated { visibility: hidden; }
+	.animated.visible { visibility: visible; }
+	.animate-hover { @include animation-fill-mode(both); }
+
+	.mobile .hidden-mobile { display: none; }
+
+	.shadow { 
+		@include box-shadow(1px 1px 20px 0px rgba(0,0,0,0.2));
+	}
+	
+	.container { position: relative; }
+	.container-custom { 
+		width: 900px; 
+
+		@media #{$screen-md} {
+			width: auto;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		@media #{$screen-xs} {
+			margin-left: 0px;
+			margin-right:  0px;
+		}
+	}
+
+	.row.no-spaces { margin-left: 0; margin-right: 0; }
+	.row.no-spaces > *[class^='col'], .row.no-spaces > *[class*=' col'] { padding-left: 0; padding-right: 0; }
+
+	.row.long-spaces { margin-left: -30px; margin-right: -30px; }
+	.row.long-spaces > *[class^='col'], .row.long-spaces > *[class*=' col'] { padding-left: 30px; padding-right: 30px; }
+
+	html.locked-scrolling,
+	html.locked-scrolling body {
+	  height: 100%;
+	  overflow: hidden;
+	}
+
+	@media #{$screen-sm} {
+		.v-center-items {
+			display: block;
+		}
+		.v-center {
+			top: auto;
+			@include translate3d(0,0,0);
+		}
+		.v-bottom {
+			top: auto;
+			@include translate3d(0,0,0);
+		}
+		.h-sm, .h-md, .h-lg, .fullheight {
+			height: auto;
+		}
+	}
+
+	html[dir="rtl"] {
+		.text-left {
+			text-align: right;
+		}
+		.text-right {
+			text-align: left;
+		}
+	}
+

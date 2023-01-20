@@ -1,0 +1,26 @@
+/* ---------------------------------------------------------------------------- */
+/* --- 3. HEADER
+/* ----------------------------------------------------------------------------- */
+
+#header {
+	position: fixed;
+	z-index: 888;
+	font-family: $font-secondary;
+
+	&.dark {
+		background-color: $color-dark;
+		color: $color-white;
+	}
+
+	&.light {
+		background-color: $color-white;
+		color: $color-text-dark;
+		@include box-shadow(5px 5px 40px 0px rgba(#000,0.06));
+	}
+}
+
+@import "_header/header-vertical";
+@import "_header/header-vertical-rtl";
+@import "_header/header-horizontal";
+@import "_header/header-horizontal-rtl";
+

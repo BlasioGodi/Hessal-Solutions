@@ -1,0 +1,50 @@
+/* 5.4 Breadcrumb
+----------------------------------------- */
+
+.breadcrumb {
+	background: transparent;
+	font-size: 12px;
+	margin-bottom: 40px;
+	padding: 0;
+	height: 50px;
+	overflow: auto;
+	white-space: nowrap;
+	border-bottom: 1px solid $color-line-dark;
+	font-size: 12px;
+
+	> li {
+		position: relative;
+		display: inline-block;
+		padding: 18px 19px;
+		font-family: $font-secondary;
+
+		+ li {
+			&:before, &:after {
+				position: absolute;
+				top: 0;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 25px 0 25px 10px;
+				content: ' ';
+				padding: 0;
+			}
+			&:before {
+				left: -7px;
+				border-color: transparent transparent transparent $color-line-dark;
+			}
+			&:after {
+				left: -8px;
+				border-color: transparent transparent transparent $color-white;
+			}
+		}
+
+		&:first-child {
+			color: $color-primary;
+		}
+
+		&.active {
+			color: $color-text-muted-dark-2;
+		}
+	}
+}

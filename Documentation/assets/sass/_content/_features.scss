@@ -1,0 +1,38 @@
+/* 4.2 Features
+----------------------------------------------------------*/
+.feature {
+	margin-bottom: 30px;
+
+	&.feature-1 {
+		.icon {
+			margin-bottom: 16px;
+		}
+	}
+
+	&.feature-2 {
+
+		.feature-content {
+			padding-left: 50px;
+			padding-top: 10px;
+		}
+
+		.icon {
+			float: left;
+
+			&.icon-sm + .feature-content { padding-left: 45px; }
+			&.icon-lg + .feature-content { padding-left: 90px; }
+
+			&.icon-circle {
+				& + .feature-content { padding-left: 95px; }
+				&.icon-sm + .feature-content { padding-left: 64px; }
+				&.icon-lg + .feature-content { padding-left: 140px; }
+			}
+
+		}
+
+		&.feature-sm {
+			min-height: 0;
+		}
+	}
+
+}

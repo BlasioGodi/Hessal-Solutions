@@ -1,0 +1,272 @@
+/* 5.5 Buttons
+----------------------------------------------------------*/
+
+.btn {
+	position: relative;
+	font-family: $font-secondary;
+	font-size: 12px;
+	font-weight: 600;
+	@include border-radius(40px);
+	padding: 18px 34px;
+	border: none;
+	color: $color-white;
+	@include transition(all 0.3s linear);
+	outline: none;
+	border: none;
+	background: transparent;
+	margin-bottom: 3px;
+
+	> .i {
+		position: relative;
+		top: 1px;
+
+		> i {
+			display: inline-block;
+			@include transition(transform 0.2s ease-out, opacity 0.2s ease-out);
+		}
+
+		> i:nth-child(2) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include translateY(-10px);
+			@include opacity(0);
+		}
+	}
+
+	&:hover > .i {
+		> i:nth-child(1) {
+			@include translateY(10px);
+			@include opacity(0);
+		}
+		> i:nth-child(2) {
+			@include translateY(0);
+			@include opacity(1);
+		}
+	}
+
+	&:hover, &:focus {
+		color: $color-white;
+	}
+
+	&:focus:active, &:focus, &:active {
+		outline: none !important; 
+		@include box-shadow(none)
+	}
+
+	&.btn-xs {
+		padding: 7px 20px;
+		font-size: 10px;
+	}
+	&.btn-sm {
+		padding: 13px 24px;
+		font-size: 11px;
+	}
+	&.btn-lg {
+		padding: 23px 40px;
+		font-size: 13px;
+	}
+	&.btn-section {
+		display: block;
+		padding: 40px;
+		text-align: center;
+		@include border-radius(0);
+		font-family: $font-primary;
+		font-size: 18px;
+		text-transform: none;
+		font-weight: 300;
+	}
+
+	$k: 1;
+	@for $i from 1 through length($colorVersions)/2 {
+		$type: nth($colorVersions,$k);
+		$color: nth($colorVersions,$k+1);
+
+		&.btn-#{$type} {
+			background-color: $color;
+			&:hover, &:focus {
+				background-color: adjust_hue(desaturate(darken($color, 10), 5), 0)
+			}
+		}
+		$k: $k+2;
+	}
+}
+
+.btn-default {
+	color: $color-text-dark;
+	background-color: $color-grey;
+
+	&:hover, &:focus { 
+		color: $color-text-dark;
+		background-color: $color-grey-2; 
+	}
+}
+
+.dark {
+	.btn-default { 
+		color: $color-white;
+		background-color: rgba($color-black,0.1);
+		&:hover, &:focus { 
+			background-color: rgba($color-black,0.2);
+		}
+	}
+}
+
+.btn-white { 
+	background-color: $color-white; 
+	color: $color-primary; 
+
+	&:hover, &:focus {
+		background-color: shade($color-primary,10%);
+		color: $color-white; 
+	}
+}
+
+.btn-link {
+	color: inherit;
+	border: none;
+	&:hover, &:focus {
+		color: inherit;
+		text-decoration: none;
+		@include opacity(0.8);
+	}
+}
+
+/* Submit Button */
+
+.btn-submit {
+	text-align: center;
+	background-color: transparent !important;
+	border: none;
+
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 13px;
+		padding-top: 10px;
+		background-color: $color-primary;
+		border: 2px solid $color-primary;
+		@include border-radius(50px);
+		@include transition(all 0.3s linear);
+		content: ' ';
+		color: $color-white;
+	}
+
+	&.btn-white {
+		&:after {
+			background-color: $color-white;
+		}
+		&:hover, &:focus {
+			color: $color-white;
+			&:after {
+				background-color: shade($color-primary,10%);
+			}
+		}
+	}
+
+	&:hover, &:focus {
+		color: $color-white;
+	}
+
+	> * {
+		position: relative;
+		z-index: 2;
+	}
+
+	&.loading {
+   		pointer-events: none;
+
+		> * {
+			opacity: 0 !important;
+			visibility: hidden;
+		}
+			
+		&:after {
+			width: 53px;
+			left: 50%;
+			margin-left: -26px;
+			@include animation(btnLoading 1.2s both 0.5s infinite);
+			line-height: 28px;
+   			font-size: 20px;
+		}
+
+		&.success {
+			&:after {
+				font-family: 'themify';
+				background-color: $color-green;
+				border-color: $color-green;
+				@include animation(none);
+				content: "\e64c";
+			}
+		}
+
+		&.error {
+			&:after {
+				font-family: 'themify';
+				background-color: $color-red;
+				border-color: $color-red;
+				@include animation(none);
+				content: "\e646";
+			}
+		}
+	}
+}
+
+@include keyframes(btnLoading) {
+	0% { @include scale(1); }
+	12% { @include scale(0.7); }
+	38% { @include scale(1.1); }
+	62% { @include scale(0.8); }
+	87% { @include scale(1); }
+}
+
+/* Play Button */
+
+.btn-play {
+	position: relative;
+	display: inline-block;
+	font-size: 52px;
+	width: 82px;
+	height: 82px;
+	font-size: 22px;
+	vertical-align: middle;
+	margin-bottom: 3px;
+	color: $color-white;
+
+	&.btn-lg {
+		width: 120px;
+		height: 120px;
+	}
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		@include border-radius(50%);
+		@include box-shadow(0px 5px 16px 0px rgba(0,0,0,0.5));
+		@include transition(all 0.3s ease-out);
+		content: ' ';
+		background: rgba($color-black,0.65);
+	}
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include translate3d(-50%,-50%,0);
+		@include filter(blur(0));
+		border-style: solid;
+		border-width: 5px 0 5px 10px;
+		border-color: transparent transparent transparent #ffffff;
+		content: ' ';
+	}
+
+	&:hover:before {
+		@include scale(1.2);
+	}
+}

@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+/* -----------------------------------------------------------------------------
+
+Sukces - Neat Personal Resume CV vCard Template
+
+File:			CSS Theme
+Version:        1.0
+Last change:    15/07/16 
+Author:			Suelo 
+
+Table of Contents:
+
+1. Document Setup
+2. Basic
+3. Header 
+-- 3.1 Header Vertical
+-- 3.2 Header Vertical RTL
+-- 3.3 Header Horizontal
+-- 3.4 Header Horizontal RTL
+4. Content 
+-- 4.1 Blog
+-- 4.2 Features
+-- 4.3 Media
+-- 4.4 Other 
+-- 4.5 Sections
+-- 4.6 Timeline
+5. Elements 
+-- 5.1 Accordion
+-- 5.2 Ajax Modal
+-- 5.3 Buttons
+-- 5.4 Backgrounds
+-- 5.5 Breadcrumbs
+-- 5.6 Contact Popup
+-- 5.7 Carousel
+-- 5.8 Forms 
+-- 5.9 Icons
+-- 5.10 Images 
+-- 5.11 Labels / Badges
+-- 5.12 Loader
+-- 5.13 Modals
+-- 5.14 Navigations
+-- 5.15 Other
+-- 5.16 Pagination
+-- 5.17 Price Tables
+-- 5.18 Progress Bars
+-- 5.19 Typography
+6. Widgets 
+7. Animations 
+
+-------------------------------------------------------------------------------- */
+
+// Import CSS3 Mixins 
+@import "compass/css3";
+
+// Import Config 
+@import "config";
+
+// Import Styles
+@import "setup";
+@import "basics";
+@import "header";
+@import "content";
+@import "elements";
+@import "widgets";
+@import "animations";
+

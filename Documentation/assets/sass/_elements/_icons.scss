@@ -1,0 +1,138 @@
+/* 5.9 Icons
+----------------------------------------------------------*/
+
+.icon {
+	position: relative;
+	display: inline-block;
+	font-size: 34px;
+	width: 48px;
+	vertical-align: middle;
+	margin-bottom: 3px;
+
+	&.icon-sm { font-size: 22px; width: 30px;  }
+	&.icon-lg { font-size: 68px; width: 84px;  }
+	&.icon-xl { font-size: 98px; width: 128px;  }
+
+	&.icon-muted { color: $color-text-muted-dark-2; }
+
+	$k: 1;
+	@for $i from 1 through length($colorVersions)/2 {
+		$type: nth($colorVersions,$k);
+		$color: nth($colorVersions,$k+1);
+
+		&.icon-#{$type} {
+			color: $color;
+		}
+		$k: $k+2;
+	}
+
+	$k: 1;
+	@for $i from 1 through length($socialBrands)/2 {
+		$type: nth($socialBrands,$k);
+		$color: nth($socialBrands,$k+1);
+
+		&.icon-#{$type} {
+			color: $color;
+
+			&:hover, &:focus {
+				color: shade($color,10%);
+			}
+		}
+		$k: $k+2;
+	}
+
+	&.icon-hover {
+		@include transition(all 0.2s ease-out);
+
+		$k: 1;
+		@for $i from 1 through length($colorVersions)/2 {
+			$type: nth($colorVersions,$k);
+			$color: nth($colorVersions,$k+1);
+
+			&.icon-#{$type} {
+				&:hover, &:focus {
+					color: shade($color,10%);
+				}
+			}
+			$k: $k+2;
+		}
+	}
+
+	&.icon-circle {
+		height: 48px;
+		font-size: 14px;
+		text-align: center;
+		color: #fff;
+		@include border-radius(50%);
+
+		> * {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate3d(-50%,-50%,0);
+			@include filter(blur(0));
+		}
+
+		&.icon-sm { height: 30px; font-size: 13px; }
+		&.icon-lg { height: 84px; font-size: 36px; }
+		&.icon-xl { height: 128px; font-size: 56px; }
+
+		&.icon-white { background-color: $color-white; }
+		&.icon-grey { background-color: $color-grey-2; }
+
+		$k: 1;
+		@for $i from 1 through length($colorVersions)/2 {
+			$type: nth($colorVersions,$k);
+			$color: nth($colorVersions,$k+1);
+
+			&.icon-#{$type} {
+				background-color: $color;
+			}
+			$k: $k+2;
+		}
+
+		$k: 1;
+		@for $i from 1 through length($socialBrands)/2 {
+			$type: nth($socialBrands,$k);
+			$color: nth($socialBrands,$k+1);
+
+			&.icon-#{$type} {
+				background-color: $color;
+
+				&:hover, &:focus {
+					color: $color-white;
+					background-color: shade($color,10%);
+				}
+			}
+			$k: $k+2;
+		}
+
+		&.icon-hover {
+			@include transition(all 0.2s ease-out);
+
+			$k: 1;
+			@for $i from 1 through length($colorVersions)/2 {
+				$type: nth($colorVersions,$k);
+				$color: nth($colorVersions,$k+1);
+
+				&.icon-#{$type} {
+					&:hover, &:focus {
+						color: $color-white;
+						background-color: shade($color,10%);
+					}
+				}
+				$k: $k+2;
+			}
+		}
+	}
+
+}
+
+.dark .icon {
+	&.icon-muted { color: $color-text-muted-light-2; }
+}
+
+
+.i-before { margin-right: 8px; }
+.i-after { margin-left: 8px; }
+.i-before-after { margin-right: 8px; margin-left: 8px; }
