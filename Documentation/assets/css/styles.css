@@ -1610,8 +1610,8 @@ pre code {
   margin-left: auto;
 }
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .col-lg-1,
 .col-lg-10,
@@ -14159,7 +14159,15 @@ Copyright (c) 2015 Daniel Eden
   color: #222;
 }
 
+.h3-cap {
+  text-transform: capitalize;
+}
+
 .p-add {
   font-size: 2rem;
   color: #262626;
+}
+
+.projects-add{
+  font-size:4rem;
 }
