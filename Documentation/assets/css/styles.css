@@ -14153,3 +14153,13 @@ Copyright (c) 2015 Daniel Eden
     transform: scale(1.5);
   }
 }
+
+/* Additional Styles*/
+.h3-add {
+  color: #222;
+}
+
+.p-add {
+  font-size: 2rem;
+  color: #262626;
+}
