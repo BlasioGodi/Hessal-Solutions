@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------------
 
-Sukces - Neat Personal Resume CV vCard Template
+Hessal | Hessal LPG Solutions
 
 File:           JS Core
 Version:        1.0
