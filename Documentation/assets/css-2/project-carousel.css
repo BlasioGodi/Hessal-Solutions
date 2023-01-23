@@ -231,7 +231,7 @@
 .owl-prev {
   left: 0.8em;
   padding-left: 35px;
-  background: url(../img/img-icon/prev.png) left 50% no-repeat;
+  background: url(/img/img-icon/prev.png) left 50% no-repeat;
   background-size: 1.3em 1em;
 }
 
@@ -239,7 +239,7 @@
   left: auto;
   right: 0.8em;
   padding-right: 35px;
-  background: url(../img/img-icon/next.png) right 50% no-repeat;
+  background: url(/img/img-icon/next.png) right 50% no-repeat;
   background-size: 1.3em 1em;
 }
 
