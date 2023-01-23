@@ -14171,3 +14171,9 @@ Copyright (c) 2015 Daniel Eden
 .projects-add {
   font-size: 4rem;
 }
+
+.whatsapp {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

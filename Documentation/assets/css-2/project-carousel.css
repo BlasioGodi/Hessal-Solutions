@@ -13,6 +13,8 @@
 @import url("layers.css");
 @import url("navigation.css");
 
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -146,8 +148,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 9em;
-  height: 9em;
+  width: 6em;
+  height: 6em;
   margin: -4.5em;
   border-radius: 50%;
   background-color: #ff904c;
@@ -169,7 +171,7 @@
   top: 50%;
   width: 2.625em;
   height: 2.625em;
-  background: url(../img/img-icon/zoom.png) 0 0 no-repeat;
+  background: url(/img/img-icon/zoom.png) 0 0 no-repeat;
   background-size: cover;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
