@@ -14177,3 +14177,7 @@ Copyright (c) 2015 Daniel Eden
   bottom: 20px;
   right: 20px;
 }
+
+.lead-color {
+  font-weight: 500;
+}
