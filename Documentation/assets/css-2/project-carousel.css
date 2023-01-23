@@ -40,6 +40,124 @@
   color: #fff;
 }
 
+ul {
+  list-style: none;
+}
+
+/* 2.2 Vertical Panel */
+
+.vertical-panel,
+.vertical-panel-content {
+  position: absolute;
+  width: 19.735vmin;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.vertical-panel {
+  z-index: 3;
+  height: 10000px;
+  background-color: #2b2b2b;
+}
+
+.vertical-panel-content {
+  z-index: 4;
+}
+
+.vertical-panel-info {
+  margin-bottom: 3.5vmin;
+}
+
+.vertical-panel-info .line {
+  height: 5vmin;
+  width: 1px;
+  margin: 15px auto 0;
+  background-color: #646464;
+}
+
+.vertical-panel-title {
+  font-family: "montserratsemibold";
+  font-size: 15px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  color: #fff;
+  position: relative;
+  left: -6px;
+  margin: 0 auto;
+  width: 1px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+@media (max-height: 850px) {
+  .vertical-panel-title {
+    display: none;
+  }
+}
+
+.social-list {
+  margin-bottom: 0.5vmin;
+}
+
+.social-list li {
+  margin-top: 0.5vmin;
+}
+
+.social-list .fa {
+  font-size: 32px;
+  color: #606060;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.17s ease-in-out;
+  -moz-transition: all 0.17s ease-in-out;
+  -webkit-transition: all 0.17s ease-in-out;
+  -o-transition: all 0.17s ease-in-out;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.social-list .fa:hover {
+}
+
+.social-list-facebook .fa:hover {
+  color: #4267b2;
+  text-decoration: none;
+}
+
+.social-list-whatsapp .fa:hover {
+  color: #25d366;
+  text-decoration: none;
+}
+
+.social-list-twitter .fa:hover {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.social-list-instagram .fa:hover {
+  color: #fcaf45;
+  text-decoration: none;
+}
+
+.social-list-linkedin .fa:hover {
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.social-list-pinterest .fa:hover {
+  color: #e60023;
+  text-decoration: none;
+}
+
 /* ------------------------------------------------------------------------------- */
 /*  5. Projects
 /* ------------------------------------------------------------------------------- */
