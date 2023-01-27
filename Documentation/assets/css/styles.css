@@ -14185,3 +14185,7 @@ Copyright (c) 2015 Daniel Eden
 .nav-image {
   filter: blur(4px);
 }
+
+.post-heading {
+  color: white;
+}
