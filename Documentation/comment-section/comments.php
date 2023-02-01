@@ -1,24 +1,3 @@
-<?php
-include 'config.php';
-
-if (isset($_POST['post_comments'])) {
-
-    $name = $_POST['name'];
-    $message = $_POST['message'];
-
-    $sql = "INSERT INTO demo (name, message)
-        VALUES ('$name','$message')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,10 +17,10 @@ if (isset($_POST['post_comments'])) {
 
 <body>
     <div class="container">
-        <form action="#" method="post" class="form">
-            <input type="text" class="name" name="name" placeholder="Name">
+        <form action="post-comments.php" method="post" class="form">
+            <input type="text" class="name" name="user_name" placeholder="Name">
             <br>
-            <textarea name="" id="message" cols="30" rows="10" placeholder="message"></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
             <br>
             <button type="submit" class="btn" name="post_comments">Post Comment</button>
         </form>
