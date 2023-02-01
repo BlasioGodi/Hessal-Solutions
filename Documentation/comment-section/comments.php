@@ -1,3 +1,24 @@
+<?php
+include 'config.php';
+
+if (isset($_POST['post_comments'])) {
+
+    $name = $_POST['user_name'];
+    $message = $_POST['message'];
+
+    $sql = "INSERT INTO demo (name, message)
+        VALUES ('$name','$message')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +38,7 @@
 
 <body>
     <div class="container">
-        <form action="post-comments.php" method="post" class="form">
+        <form action="#" method="post" class="form">
             <input type="text" class="name" name="user_name" placeholder="Name">
             <br>
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
@@ -26,10 +47,23 @@
         </form>
     </div>
     <div class="content">
-        <h1>John Doe</h1>
-        <p>Lorem Ipsum sit amet conectur dispade dispise commodi sint</p>
-        <h1>John Doe</h1>
-        <p>Lorem Ipsum sit amet conectur dispade dispise commodi sint</p>
+        <?php
+
+        $sql = "SELECT * FROM demo";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+        <h1>
+            <?php echo $row['name']; ?>
+        </h1>
+        <p>
+            <?php echo $row['message']; ?>
+        </p>
+        <?php }
+        } ?>
 
     </div>
 
