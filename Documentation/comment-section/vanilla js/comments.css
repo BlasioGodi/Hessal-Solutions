@@ -76,8 +76,8 @@ textarea::placeholder {
 .container {
   background: white;
   border-radius: 10px;
-  width: 500px;
-  height: 300px;
+  width: 700px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
