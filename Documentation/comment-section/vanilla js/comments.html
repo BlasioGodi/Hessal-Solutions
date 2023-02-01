@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="comments.css">
     <title>Comments Section</title>
 </head>
 
@@ -20,11 +21,15 @@
             <h3>Leave a Reply</h3>
             <div id="hdc_create_comment">
                 <!--Comment Form-->
-                <label for="hdc_comment_input">Leave a comment</label>
-                <textarea name="comment" id="hdc_comment_input" cols="30" rows="10">Tell us what you think...</textarea>
+                <label for="hdc_comment_input" class="hdc_label">Leave a comment</label>
+                <textarea name="comment" id="hdc_comment_input" cols="30" rows="10"
+                    class="hdc_input">Tell us what you think...</textarea>
 
-                <label for="hdc_email_input">Your email</label>
-                <input type="email" name="email">
+                <label for="hdc_email_input" class="hdc_label">Your email</label>
+                <input type="email" name="email" id="hdc_email_input" class="hdc_input">
+
+                <label for="hdc_name_input" class="hdc_label">Your name</label>
+                <input type="text" name="name" id="hdc_name_input" class="hdc_input">
 
             </div>
             <div id="hdc_comments">
