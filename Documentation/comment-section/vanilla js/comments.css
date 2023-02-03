@@ -40,5 +40,47 @@ body {
   border: 1px solid #acc;
 }
 
-.hdc_comment_contact {
+#hdc_create_comment {
+}
+
+#hdc_comment_contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+#hdc_comment_footer {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#hdc_reaction_title {
+  display: inline-block;
+}
+
+.hdc_reaction {
+  padding: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.hdc_reaction:hover {
+  border: 1px solid #ccc;
+}
+
+#hdc_submit {
+  background: #222;
+  padding: 12px 16px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  transition: 0.5s all ease;
+}
+
+#hdc_submit:hover {
+  background: orange;
+  color: #222;
 }

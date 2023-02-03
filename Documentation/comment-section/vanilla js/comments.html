@@ -25,11 +25,28 @@
                 <textarea name="comment" id="hdc_comment_input" cols="30" rows="10"
                     class="hdc_input">Tell us what you think...</textarea>
 
-                <div class="hdc_comment_contact">
-                    <label for="hdc_email_input" class="hdc_label">Your email</label>
-                    <input type="email" name="email" id="hdc_email_input" class="hdc_input">
-                    <label for="hdc_name_input" class="hdc_label">Your name</label>
-                    <input type="text" name="name" id="hdc_name_input" class="hdc_input">
+                <div id="hdc_comment_contact">
+                    <div>
+                        <label for="hdc_email_input" class="hdc_label">Your email</label>
+                        <input type="email" name="email" id="hdc_email_input" class="hdc_input">
+                    </div>
+
+                    <div>
+                        <label for="hdc_name_input" class="hdc_label">Your name</label>
+                        <input type="text" name="name" id="hdc_name_input" class="hdc_input">
+                    </div>
+                </div>
+
+                <div id="hdc_comment_footer">
+                    <div id="hdc_comment_reactions">
+                        <h4 id="hdc_reaction_title">Reactions</h4>
+                        <span class="hdc_reaction" data-reaction="like">👍</span>
+                        <span class="hdc_reaction" data-reaction="laugh">😆</span>
+                        <span class="hdc_reaction" data-reaction="angry">😠</span>
+                        <span class="hdc_reaction" data-reaction="sad">😔</span>
+                        <span class="hdc_reaction" data-reaction="love">🥰</span>
+                    </div>
+                    <button id="hdc_submit" class="">Submit</button>
                 </div>
 
             </div>
