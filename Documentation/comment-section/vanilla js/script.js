@@ -14,9 +14,16 @@ function hdc_can_submit() {
     let email = HDC_EL.email.value.trim();
     let name = HDC_EL.user_name.value.trim();
     if (comment.length > 4 && email.length > 4 && name.length > 4) {
-        HDC_EL.submit.classList.add("hdc_submit_enabled");
-        HDC_EL.submit.disabled = false;
-        console.log("good to go");
+        //Email validation first takes place and then validation of other items.
+        if (hdc_validate_email(email)) {
+            HDC_EL.submit.classList.add("hdc_submit_enabled");
+            HDC_EL.submit.disabled = false;
+            console.log("Email is valid. good to go");
+        } else {
+            HDC_EL.submit.classList.remove("hdc_submit_enabled");
+            HDC_EL.submit.disabled = true;
+            console.log("Email is not valid.");
+        }
     } else {
         HDC_EL.submit.classList.remove("hdc_submit_enabled");
         HDC_EL.submit.disabled = true;
@@ -30,3 +37,16 @@ function hdc_set_event_listeners() {
 }
 
 hdc_set_event_listeners();
+
+//Email validation function
+function hdc_validate_email(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
+
+//Email validation check Example
+// if (hdc_validate_email(email)) {
+//     console.log("Email is valid");
+// } else {
+//     console.log("Email is not valid");
+// };
