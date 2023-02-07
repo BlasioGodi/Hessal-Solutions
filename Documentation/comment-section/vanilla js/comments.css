@@ -67,6 +67,10 @@ body {
   cursor: pointer;
 }
 
+.hdc_reaction_selected {
+  border: 1px solid #999;
+}
+
 .hdc_reaction:hover {
   border: 1px solid #ccc;
 }

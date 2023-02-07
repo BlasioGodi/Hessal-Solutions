@@ -8,6 +8,9 @@ const HDC_EL = {
     reactions: document.getElementsByClassName("hdc_reaction")
 };
 
+let canSubmit = false;
+let reaction = null;
+
 function hdc_can_submit() {
     //Check the required fields
     let comment = HDC_EL.comment.value.trim();
@@ -19,21 +22,36 @@ function hdc_can_submit() {
             HDC_EL.submit.classList.add("hdc_submit_enabled");
             HDC_EL.submit.disabled = false;
             console.log("Email is valid. good to go");
+            canSubmit = true;
         } else {
             HDC_EL.submit.classList.remove("hdc_submit_enabled");
             HDC_EL.submit.disabled = true;
             console.log("Email is not valid.");
+            canSubmit = false;
         }
     } else {
         HDC_EL.submit.classList.remove("hdc_submit_enabled");
         HDC_EL.submit.disabled = true;
+        canSubmit = false;
     }
+}
+
+function hdc_select_reaction() {
+    reaction = this.getAttribute("data-reaction");
+    let prev = document.getElementsByClassName("hdc_reaction_selected")[0];
+    if (prev) {
+        prev.classList.remove("hdc_reaction_selected");
+    }
+    this.classList.add("hdc_reaction_selected");
 }
 
 function hdc_set_event_listeners() {
     HDC_EL.comment.addEventListener("keyup", hdc_can_submit);
     HDC_EL.email.addEventListener("keyup", hdc_can_submit);
     HDC_EL.user_name.addEventListener("keyup", hdc_can_submit);
+    for (let i = 0; i < HDC_EL.reactions.length; i++) {
+        HDC_EL.reactions[i].addEventListener("click", hdc_select_reaction);
+    }
 }
 
 hdc_set_event_listeners();
