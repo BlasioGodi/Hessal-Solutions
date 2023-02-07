@@ -87,5 +87,5 @@ body {
 }
 
 .hdc_submit_enabled {
-  opacity: 1;
+  opacity: 1 !important;
 }
