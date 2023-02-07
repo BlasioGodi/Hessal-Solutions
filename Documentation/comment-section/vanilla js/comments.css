@@ -78,9 +78,14 @@ body {
   border: none;
   border-radius: 50px;
   transition: 0.5s all ease;
+  opacity: 0.4;
 }
 
 #hdc_submit:hover {
   background: orange;
   color: #222;
+}
+
+.hdc_submit_enabled {
+  opacity: 1;
 }
