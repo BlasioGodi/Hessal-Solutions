@@ -11,6 +11,18 @@ const HDC_EL = {
 let canSubmit = false;
 let reaction = null;
 
+function hdc_submit() {
+    if (canSubmit) {
+        let comment = {
+            comment: HDC_EL.comment.value.trim(),
+            email: HDC_EL.email.value.trim(),
+            name: HDC_EL.user_name.value.trim(),
+            reaction: reaction
+        };
+        console.log(comment);
+    }
+}
+
 function hdc_can_submit() {
     //Check the required fields
     let comment = HDC_EL.comment.value.trim();
@@ -46,6 +58,7 @@ function hdc_select_reaction() {
 }
 
 function hdc_set_event_listeners() {
+    HDC_EL.submit.addEventListener("click", hdc_submit);
     HDC_EL.comment.addEventListener("keyup", hdc_can_submit);
     HDC_EL.email.addEventListener("keyup", hdc_can_submit);
     HDC_EL.user_name.addEventListener("keyup", hdc_can_submit);
