@@ -101,6 +101,7 @@ body {
   border: 1px solid #eee;
   border-bottom: 3px solid #ccc;
   padding: 20px;
+  margin-bottom: 12px;
 }
 
 .hdc_comment p:first-child {
