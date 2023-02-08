@@ -106,3 +106,20 @@ body {
 .hdc_comment p:first-child {
   margin-top: 0;
 }
+
+.hdc_meta {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  align-items: center;
+}
+
+.hdc_vote {
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  align-items: center;
+}
+.hdc_vote_options {
+  display: grid;
+  grid-template-columns: 1fr;
+}
