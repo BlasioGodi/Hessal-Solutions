@@ -111,6 +111,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 80px;
   align-items: center;
+  margin-top: 20px;
 }
 
 .hdc_vote {
@@ -122,4 +123,13 @@ body {
 .hdc_vote_options {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.hdc_meta_date_author {
+  font-size: 0.85rem;
+}
+
+.hdc_meta_author {
+  margin-left: 22px;
+  font-weight: bold;
 }
