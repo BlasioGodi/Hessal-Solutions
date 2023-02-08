@@ -20,6 +20,7 @@ function hdc_submit() {
             reaction: reaction
         };
         console.log(comment);
+        hdc_disable_submit();
     }
 }
 

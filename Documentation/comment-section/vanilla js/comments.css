@@ -93,3 +93,7 @@ body {
 .hdc_submit_enabled {
   opacity: 1 !important;
 }
+
+#hdc_comments {
+  margin: 20px 0;
+}
