@@ -97,3 +97,12 @@ body {
 #hdc_comments {
   margin: 20px 0;
 }
+.hdcomment {
+  border: 1px solid #eee;
+  border-bottom: 3px solid #ccc;
+  padding: 20px;
+}
+
+.hdc_comment p:first-child {
+  margin-top: 0;
+}
