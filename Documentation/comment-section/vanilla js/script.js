@@ -31,16 +31,20 @@ function hdc_can_submit() {
     if (comment.length > 4 && email.length > 4 && name.length > 4) {
         //Email validation first takes place and then validation of other items.
         if (hdc_validate_email(email)) {
-            HDC_EL.submit.classList.add("hdc_submit_enabled");
-            HDC_EL.submit.disabled = false;
-            console.log("Email is valid. good to go");
-            canSubmit = true;
+            hdc_enable_submit()
+
         } else {
             hdc_disable_submit()
         }
     } else {
         hdc_disable_submit()
     }
+}
+
+function hdc_enable_submit() {
+    HDC_EL.submit.classList.add("hdc_submit_enabled");
+    HDC_EL.submit.disabled = false;
+    canSubmit = true;
 }
 
 function hdc_disable_submit() {
