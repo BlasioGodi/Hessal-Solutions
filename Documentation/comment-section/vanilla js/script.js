@@ -36,16 +36,17 @@ function hdc_can_submit() {
             console.log("Email is valid. good to go");
             canSubmit = true;
         } else {
-            HDC_EL.submit.classList.remove("hdc_submit_enabled");
-            HDC_EL.submit.disabled = true;
-            console.log("Email is not valid.");
-            canSubmit = false;
+            hdc_disable_submit()
         }
     } else {
-        HDC_EL.submit.classList.remove("hdc_submit_enabled");
-        HDC_EL.submit.disabled = true;
-        canSubmit = false;
+        hdc_disable_submit()
     }
+}
+
+function hdc_disable_submit() {
+    HDC_EL.submit.classList.remove("hdc_submit_enabled");
+    HDC_EL.submit.disabled = true;
+    canSubmit = false;
 }
 
 function hdc_select_reaction() {
