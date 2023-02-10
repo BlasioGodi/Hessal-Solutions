@@ -5,7 +5,9 @@ const HDC_EL = {
     comment: document.getElementById("hdc_comment_input"),
     email: document.getElementById("hdc_email_input"),
     user_name: document.getElementById("hdc_name_input"),
-    reactions: document.getElementsByClassName("hdc_reaction")
+    reactions: document.getElementsByClassName("hdc_reaction"),
+    upvotes: document.getElementsByClassName("hdc_upvote"),
+    downvotes: document.getElementsByClassName("hdc_downvote")
 };
 
 let canSubmit = false;
@@ -63,6 +65,11 @@ function hdc_select_reaction() {
     this.classList.add("hdc_reaction_selected");
 }
 
+function hdc_vote(el, vote) {
+    console.log(el);
+    console.log(vote);
+}
+
 function hdc_set_event_listeners() {
     HDC_EL.submit.addEventListener("click", hdc_submit);
     HDC_EL.comment.addEventListener("keyup", hdc_can_submit);
@@ -70,6 +77,15 @@ function hdc_set_event_listeners() {
     HDC_EL.user_name.addEventListener("keyup", hdc_can_submit);
     for (let i = 0; i < HDC_EL.reactions.length; i++) {
         HDC_EL.reactions[i].addEventListener("click", hdc_select_reaction);
+    }
+
+    for (let i = 0; i < HDC_EL.upvotes.length; i++) {
+        HDC_EL.upvotes[i].addEventListener("click", function () {
+            hdc_vote(this, true)
+        });
+        HDC_EL.downvotes[i].addEventListener("click", function () {
+            hdc_vote(this, false)
+        });
     }
 }
 
