@@ -3350,13 +3350,13 @@ section.cover,
 }
 
 .section-double {
-  padding: 0;
   height: 50vw;
   max-height: 700px;
 }
 .section-double.fullheight {
   height: 100vh;
   max-height: none;
+  padding-top: 90px;
 }
 
 .section-double .image {

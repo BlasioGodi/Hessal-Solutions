@@ -3357,6 +3357,7 @@ section.cover,
 .section-double.fullheight {
   height: 100vh;
   max-height: none;
+  padding: 90px;
 }
 
 .section-double .image {
