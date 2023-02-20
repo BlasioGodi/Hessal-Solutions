@@ -2093,7 +2093,7 @@ html[dir="rtl"] .text-right {
 }
 @media only screen and (max-height: 700px) {
   #header.header-vertical .bottom {
-    position: relative;
+    position: absolute;
   }
 }
 #header.header-vertical #header-toggle {
