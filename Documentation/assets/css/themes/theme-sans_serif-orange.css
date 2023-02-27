@@ -2766,6 +2766,7 @@ html[dir="rtl"] .nav-horizontal li > a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible;
+  cursor:pointer;
 }
 .post-image:hover .hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2775,6 +2776,7 @@ html[dir="rtl"] .nav-horizontal li > a {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   visibility: visible;
+  cursor:pointer;
 }
 .post-image:not(.no-zooming):hover .image img {
   -moz-transform: scale(1.05, 1.05);
