@@ -14205,3 +14205,74 @@ Copyright (c) 2015 Daniel Eden
 .list-lpg li {
   padding-top: 12px;
 }
+
+
+/*  --------------------------------------------------------
+FOOTER
+-------------------------------------------------------- */
+.footer.footer-one .copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+}
+
+.navbar-brand-footer {
+  background: url('../../img/logo/logo-gray.png') 0 0 no-repeat;
+  display: block;
+  width: 100px;
+  height: 50px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: #8b949b;
+  padding-left: 40px;
+}
+#footer .copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #8b949b;
+  display: block;
+  width: 160px;
+}
+.copyright a:hover {
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+
+.footer-one ul {
+  margin: 0 30px;
+  padding: 0 0 25px 0;
+}
+.footer-one ul li {
+  list-style: none;
+  display: inline;
+
+}
+.footer-one ul li a {
+  color: #8b949b;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+#footer .social-container {
+  margin-top: 10px;
+}
+#footer .social-container ul.footer-social li a { 
+  font-size: 15px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 5px 0;
+  line-height: 30px;
+  border: 1px solid #f1f1f1;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.footer-two a {
+  color: #747474;
+}
+.footer-two ul li {
+  line-height: 25px;
+}
