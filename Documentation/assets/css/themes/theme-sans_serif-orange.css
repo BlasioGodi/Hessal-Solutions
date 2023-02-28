@@ -6329,6 +6329,26 @@ ol {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+ul.no-icon-list {
+  margin: 0;
+  padding: 0;
+}
+ul.no-icon-list li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul.no-icon-list li > a:hover {
+  color: rgb(248, 154, 75);
+}
+
+/* Anchor - Sitemap */
+
+a.mr50:hover {
+  color: rgb(248, 154, 75);
+}
+
 /* ---------------------------------------------------------------------------- */
 /* --- 6. WIDGETS
 /* ----------------------------------------------------------------------------- */
@@ -6490,24 +6510,24 @@ ol {
 /* Footer
 ----------------------------------------------------------*/
 .footer.footer-one .copyright {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   margin: 0 auto 25px auto;
   text-align: center;
 }
 
 .navbar-brand-footer {
-  background: url('../../img/logo/logo-gray.png') 0 0 no-repeat;
+  background: url("../../img/logo/logo-gray.png") 0 0 no-repeat;
   display: block;
   width: 100px;
   height: 50px;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 20px;
   color: #8b949b;
   padding-left: 40px;
 }
 #footer .copyright {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #8b949b;
   display: block;
@@ -6525,7 +6545,6 @@ ol {
 .footer-one ul li {
   list-style: none;
   display: inline;
-
 }
 .footer-one ul li a {
   color: #8b949b;
@@ -6536,7 +6555,7 @@ ol {
 #footer .social-container {
   margin-top: 10px;
 }
-#footer .social-container ul.footer-social li a { 
+#footer .social-container ul.footer-social li a {
   font-size: 15px;
   display: inline-block;
   width: 30px;
@@ -6545,8 +6564,8 @@ ol {
   line-height: 30px;
   border: 1px solid #f1f1f1;
   -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .footer-two a {
