@@ -2672,6 +2672,76 @@ html[dir="rtl"] .nav-horizontal li > a {
   position: relative;
 }
 
+#content .greetings div {
+  display:block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+#content .greetings div:first-of-type {    
+  animation: showup 7s infinite;
+}
+
+#content .greetings div:last-of-type {
+  animation: reveal 7s infinite;
+}
+
+#content .greetings div:last-of-type span {
+  margin-left:-600px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 600px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 600px;
+  }
+}
+
 /* 4.1 Blog
 ----------------------------------------------------------*/
 .post .post-image {
@@ -6346,7 +6416,7 @@ ul.no-icon-list li > a:hover {
 /* Anchor - Sitemap */
 
 a.mr50:hover {
-  color: rgb(248, 154, 75);
+  color: grey;
 }
 
 /* ---------------------------------------------------------------------------- */
