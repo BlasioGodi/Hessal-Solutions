@@ -2673,22 +2673,22 @@ html[dir="rtl"] .nav-horizontal li > a {
 }
 
 #content .greetings div {
-  display:block;
-  overflow:hidden;
-  white-space:nowrap;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-#content .greetings div:first-of-type {    
-  animation: showup 7s infinite;
+#content .greetings div:first-of-type {
+  animation: showup 12s infinite;
 }
 
 #content .greetings div:last-of-type {
-  animation: reveal 7s infinite;
+  animation: reveal 12s infinite;
 }
 
 #content .greetings div:last-of-type span {
-  margin-left:-600px;
-  animation: slidein 7s infinite;
+  margin-left: -600px;
+  animation: slidein 12s infinite;
 }
 
 @keyframes showup {
@@ -3271,6 +3271,10 @@ html[dir="rtl"] .comments > li ul {
   -ms-transform: scale(1.05, 1.05);
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
+}
+
+.image-post {
+  text-align: center;
 }
 
 /* Video */
