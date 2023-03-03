@@ -2891,6 +2891,8 @@ html[dir="rtl"] .nav-horizontal li > a {
   flex-direction: row-reverse;
 }
 .post.single {
+  z-index: 1;
+  position: relative;
   padding-bottom: 40px;
 }
 .post.single .post-nav {
@@ -6524,7 +6526,7 @@ a.mr50:hover {
 }
 
 /* Figure Caption */
-.figure-text{
+.figure-text {
   text-align: center;
 }
 
@@ -6756,4 +6758,8 @@ a.mr50:hover {
   100% {
     opacity: 1;
   }
+}
+
+.whatsapp-position {
+  z-index: 1;
 }
