@@ -102,6 +102,7 @@ ul {
 }
 
 .social-list {
+  display: inline-flex;
   margin-bottom: 0.5vmin;
 }
 
