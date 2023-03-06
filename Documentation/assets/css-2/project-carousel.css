@@ -193,6 +193,13 @@ ul {
   transition: all 0.5s;
 }
 
+.project .detection figure:after {
+  background-color: #111;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
 .project.project-light figure:after {
   opacity: 0.4;
 }
