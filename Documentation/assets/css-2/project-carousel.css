@@ -211,7 +211,7 @@ ul {
   top: 0;
   right: 0;
   bottom: 0;
-  margin: 3.2em 3.6em;
+  margin: 2.6rem 2.8rem;
 }
 
 .project-title {
@@ -229,6 +229,49 @@ ul {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.pr-title {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 1.56rem;
+  letter-spacing: 0.07em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.pr-description {
+  position: absolute;
+  left: 0;
+  top: 3.2rem;
+  margin: 0 0 -0.8em;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 1.3rem;
+  color: #fff;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.pr-description ul {
+  padding: 0;
+  list-style-type: disc;
+  text-align: left;
+}
+
+.pr-description ul > li {
+  padding-bottom: 1rem;
 }
 
 .image-title {
@@ -318,7 +361,17 @@ ul {
   opacity: 0;
 }
 
+.project figure:hover .pr-title {
+  top: 30px;
+  opacity: 0;
+}
+
 .project figure:hover .project-category {
+  opacity: 0;
+  letter-spacing: 2em;
+}
+
+.project figure:hover .pr-description {
   opacity: 0;
   letter-spacing: 2em;
 }
