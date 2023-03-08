@@ -1296,6 +1296,11 @@ p {
   font-weight: 300;
   line-height: 1.4;
 }
+
+.lead .lead-list{
+list-style-type: disc;
+}
+
 @media (min-width: 768px) {
   .lead {
     font-size: 21px;
