@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /hessal-sol.com/
+Allow: /hessal-sol.com/index.html
+
+
+Sitemap: https://hessal-sol.com/sitemap.xml
