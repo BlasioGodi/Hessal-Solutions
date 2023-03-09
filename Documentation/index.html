@@ -69,10 +69,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css-2/project-carousel.css">
-    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-sans_serif-orange.css" />
+    <!-- CSS Styles (Asynchronous loading - LoadCSS) -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <link rel="stylesheet" href="assets/css-2/project-carousel.css" media="print"
+        onload="this.media='all'; this.onload=null;">
+    <link id="theme" rel="stylesheet" href="assets/css/themes/theme-sans_serif-orange.css" media="print"
+        onload="this.media='all'; this.onload=null;" />
 
 </head>
 
