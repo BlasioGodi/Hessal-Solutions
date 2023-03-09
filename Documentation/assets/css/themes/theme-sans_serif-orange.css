@@ -94,15 +94,6 @@ img {
   -webkit-backface-visibility: hidden;
 }
 
-picture{
-  position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 /* ---------------------------------------------------------------------------- */
 /* --- 2. BASICS
 /* ----------------------------------------------------------------------------- */
@@ -4413,7 +4404,7 @@ html[dir="rtl"] .timeline .timeline-event:before {
 }
 
 .bg-img {
-  background-image: url(/img/bg/Fire-02.jpg);
+  background-image: url(/img/bg/Fire-02.webp);
   background-size: 1400px;
   width: 100%;
   height: 100%;
