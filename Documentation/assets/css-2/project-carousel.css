@@ -4,16 +4,9 @@
 
 /* 1.1 General */
 @import url("font-awesome.min.css");
-@import url("animate.css");
-@import url("hover.css");
 @import url("magnific-popup.css");
 @import url("owl.carousel.css");
 @import url("owl.transitions.css");
-@import url("settings.css");
-@import url("layers.css");
-@import url("navigation.css");
-
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 ::-webkit-scrollbar {
   width: 8px;
