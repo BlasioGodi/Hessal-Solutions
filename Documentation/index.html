@@ -89,7 +89,9 @@
     <!-- Header -->
     <header id="header" class="header-vertical light">
         <a href="#" class="photo">
-            <div class="nav-image"><img src="../assets/img/Hessal-152.png" alt=""></div>
+            <div class="nav-image">
+                <img src="../assets/img/Hessal-152.png" alt="">
+            </div>
         </a>
 
         <!-- Navigation -->
@@ -116,7 +118,13 @@
         <section id="home" class="section fullheight dark bg-dark">
 
             <!-- BG Image -->
-            <div class="bg-image bg-fixed"><img src="img/bg/Image-7.jpg" alt=""></div>
+            <div class="bg-image bg-fixed">
+                <picture>
+                    <source srcset="img/bg/Image-7.webp" type="image/webp">
+                    <source srcset="img/bg/Image-7.jpg" type="image/jpeg">
+                    <img src="img/bg/Image-7.jpg" alt="">
+                </picture>
+            </div>
 
             <div class="container container-custom v-center" data-local-scroll>
                 <h1 class="text-lg mb-0">
@@ -711,7 +719,7 @@
                     </div>
                 </article>
                 <div class="text-center mt-60">
-                    <a href="blog/blog_list.html" class="btn btn-primary">Read More</a>
+                    <a href="blog/blog_list.html" class="btn btn-primary">More Knowledge on LPG here</a>
                 </div>
             </div>
         </section>
