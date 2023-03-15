@@ -547,7 +547,7 @@ var Sukces = {
 
                     if ($contactForm.valid()) {
 
-                        $contactFormSender.html($('#name').val() + ' (' + $('#email').val() + ')&#x200E;');
+                        $contactFormSender.html($('#name').val() + ' (' + $('#email').val() + $('#phone').val() + ')&#x200E;');
                         $contactFormActiveStep.removeClass('active');
                         setTimeout(function () {
                             $contactFormActiveStep.hide(0, function () {

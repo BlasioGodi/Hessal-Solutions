@@ -30,14 +30,15 @@ if (isset($name, $email, $message)) {
         //SMTP Configuration settings
         $phpmailer = new PHPMailer(true);
         $phpmailer->isSMTP();
-        $phpmailer->Host = 'smtp.titan.email';
+        $phpmailer->Host = 'smtp.gmail.com';
         $phpmailer->SMTPAuth = true;
         $phpmailer->Port = 587;
-        $phpmailer->Username = 'info@hessal-sol.com';
-        $phpmailer->Password = 'grcVmCpnPbN86Sj';
+        $phpmailer->Username = 'hessalsol254@gmail.com';
+        $phpmailer->Password = 'vcexzcodvcrgwnmf';
         $phpmailer->setFrom($email, 'Hessal Website');
         $phpmailer->addReplyTo($email, 'Hessal Website');
-        $phpmailer->addAddress('muhindablasio@gmail.com', 'BIM GMAIL');
+        $phpmailer->addAddress('hessalsol254@gmail.com', 'Hessal GMAIL');
+        $phpmailer->addBCC('info@hessal-sol.com', 'Hessal Titan');
         $phpmailer->Subject = "Website Message";
         $exception = new Exception();
 
@@ -55,6 +56,7 @@ if (isset($name, $email, $message)) {
             //Redirect page header('Location: index_light.html');
             // Success
             $responses[] = 'Message sent!';
+            echo ('success');
         } else {
             $responses = 'Oops, something went wrong. Mailer Error: ' . $exception->getMessage();
             echo $exception;
