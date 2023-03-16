@@ -583,10 +583,8 @@ var Sukces = {
                         xhttp.onreadystatechange = function () {
                             if (this.readyState == 4 && this.status == 200) {
                                 dateTiming = this.responseText;
-                                console.log(dateTiming);
                             }
                         };
-
                         xhttp.open("GET", "mailto.php", true);
                         xhttp.send();
                         //End
@@ -595,8 +593,12 @@ var Sukces = {
                             url: 'mailto.php',
                             data: $form.serialize(),
                             error: function (err) { setTimeout(function () { $btn.addClass('error'); }, 1200); },
-                            success: function (data) {
-                                if (data.trim() == "success") {
+                            success: function (responseText) {
+                                var funcResponse = responseText.trim();
+                                console.log(funcResponse);
+                                var match = funcResponse.match(/success/i);
+                                console.log(match);
+                                if (match !== null) {
                                     response = 'success';
                                 } else {
                                     response = 'error';
@@ -604,6 +606,7 @@ var Sukces = {
                                 setTimeout(function () {
                                     $btn.addClass(response);
                                 }, 400);
+                                console.log("Response: ", response);
                             },
                             complete: function (data) {
                                 setTimeout(function () {

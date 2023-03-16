@@ -52,24 +52,17 @@ if (isset($name, $email, $message)) {
         $body = join('<br />', $bodyParagraphs);
         $phpmailer->Body = $body;
 
-        // Try to send the mail
-        if (!$phpmailer->send()) {
-            $responses[] = 'Oops, something went wrong. Mailer Error: ' . $phpmailer->ErrorInfo;
-            $emailSent = 'error';
-
-        } else {
+        if ($phpmailer->send() == true) {
+            // Success
             $responses[] = 'Message Sent!';
             $emailSent = 'success';
+            echo ($emailSent);
+        } else {
+            // Error
+            $errorMessage = 'Oops, something went wrong. Mailer Error: ' . $phpmailer->ErrorInfo;
+            $emailSent = 'error';
+            echo ($emailSent);
         }
     }
-}
-
-if ($emailSent == 'success')
-    echo 'success';
-else if ($emailSent == 'error')
-    echo 'error';
-else {
-    $emailSent = 'not sure';
-    echo ($emailSent);
 }
 ?>
