@@ -6,9 +6,12 @@
     <script>
     function getData() {
         var xhttp = new XMLHttpRequest();
+        var dateTiming;
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("datetime").innerHTML = this.responseText;
+                dateTiming = this.responseText;
+                console.log(dateTiming);
             }
         };
         xhttp.open("GET", "my_function.php?function=getDateTime", true);
@@ -30,10 +33,3 @@
 </body>
 
 </html>
-
-<?php
-if (isset($_GET['function']) && $_GET['function'] == 'getDateTime') {
-    require_once 'my_function.php';
-    echo getDateTime();
-}
-?>

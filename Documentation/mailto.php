@@ -11,13 +11,9 @@ $responses = [];
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-
 $message = $_POST["message"];
 
-function mailResponse($emailSent)
-{
-    return $emailSent;
-}
+$emailSent = ''; //Email sent declaration
 
 // Check if the form was submitted
 if (isset($name, $email, $message)) {
@@ -57,18 +53,23 @@ if (isset($name, $email, $message)) {
         $phpmailer->Body = $body;
 
         // Try to send the mail
-        if ($phpmailer->send()) {
-            //Redirect page header('Location: index_light.html');
-            // Success
-            $responses[] = 'Message sent!';
-            $emailSent = 'success';
-        } else {
-            $responses = 'Oops, something went wrong. Mailer Error: ' . $exception->getMessage();
+        if (!$phpmailer->send()) {
+            $responses[] = 'Oops, something went wrong. Mailer Error: ' . $phpmailer->ErrorInfo;
             $emailSent = 'error';
-            echo $exception;
+
+        } else {
+            $responses[] = 'Message Sent!';
+            $emailSent = 'success';
         }
     }
 }
 
-echo mailResponse($emailSent);
+if ($emailSent == 'success')
+    echo 'success';
+else if ($emailSent == 'error')
+    echo 'error';
+else {
+    $emailSent = 'not sure';
+    echo ($emailSent);
+}
 ?>

@@ -576,20 +576,30 @@ var Sukces = {
                     var response;
                     if ($form.valid()) {
                         $btn.addClass('loading');
-                        var serializedData = $form.serialize();
-                        console.log(serializedData); // log the serialized form data to the console
+                        //  XMLHttpRequest to get output from .php file and print on the console.
+                        //Start
+                        var xhttp = new XMLHttpRequest();
+                        var dateTiming;
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                dateTiming = this.responseText;
+                                console.log(dateTiming);
+                            }
+                        };
+
+                        xhttp.open("GET", "mailto.php", true);
+                        xhttp.send();
+                        //End
                         $.ajax({
                             type: 'POST',
                             url: 'mailto.php',
                             data: $form.serialize(),
                             error: function (err) { setTimeout(function () { $btn.addClass('error'); }, 1200); },
                             success: function (data) {
-                                var jsonData = JSON.parse(data);
-                                console.log(jsonData);
-                                if (data != "success") {
-                                    response = 'error';
-                                } else {
+                                if (data.trim() == "success") {
                                     response = 'success';
+                                } else {
+                                    response = 'error';
                                 }
                                 setTimeout(function () {
                                     $btn.addClass(response);
