@@ -11,8 +11,13 @@ $responses = [];
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-$phone = $_POST["phone"];
+
 $message = $_POST["message"];
+
+function mailResponse($emailSent)
+{
+    return $emailSent;
+}
 
 // Check if the form was submitted
 if (isset($name, $email, $message)) {
@@ -21,7 +26,7 @@ if (isset($name, $email, $message)) {
         $responses[] = 'Email is not valid!';
     }
     // Make sure the form fields are not empty
-    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+    if (empty($name) || empty($email) || empty($message)) {
         $responses[] = 'Please complete all fields!';
     }
     // If there are no errors
@@ -47,7 +52,7 @@ if (isset($name, $email, $message)) {
 
         // Enable HTML if needed
         $phpmailer->isHTML(true);
-        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Phone: {$phone}", "Message:", nl2br($message)];
+        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", nl2br($message)];
         $body = join('<br />', $bodyParagraphs);
         $phpmailer->Body = $body;
 
@@ -56,11 +61,14 @@ if (isset($name, $email, $message)) {
             //Redirect page header('Location: index_light.html');
             // Success
             $responses[] = 'Message sent!';
-            echo ('success');
+            $emailSent = 'success';
         } else {
             $responses = 'Oops, something went wrong. Mailer Error: ' . $exception->getMessage();
+            $emailSent = 'error';
             echo $exception;
         }
     }
 }
+
+echo mailResponse($emailSent);
 ?>

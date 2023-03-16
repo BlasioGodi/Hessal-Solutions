@@ -1,13 +1,4 @@
-/* -----------------------------------------------------------------------------
 
-Hessal | Hessal LPG Solutions
-
-File:           JS Core
-Version:        1.0
-Last change:    15/07/16 
-Author:         Suelo 
-
--------------------------------------------------------------------------------- */
 
 "use strict";
 
@@ -546,8 +537,7 @@ var Sukces = {
                 $('[data-target="form-next-step"]').on('click', function () {
 
                     if ($contactForm.valid()) {
-
-                        $contactFormSender.html($('#name').val() + ' (' + $('#email').val() + $('#phone').val() + ')&#x200E;');
+                        $contactFormSender.html($('#name').val() + ' (' + $('#email').val() + ')&#x200E;');
                         $contactFormActiveStep.removeClass('active');
                         setTimeout(function () {
                             $contactFormActiveStep.hide(0, function () {
@@ -586,12 +576,16 @@ var Sukces = {
                     var response;
                     if ($form.valid()) {
                         $btn.addClass('loading');
+                        var serializedData = $form.serialize();
+                        console.log(serializedData); // log the serialized form data to the console
                         $.ajax({
                             type: 'POST',
                             url: 'mailto.php',
                             data: $form.serialize(),
                             error: function (err) { setTimeout(function () { $btn.addClass('error'); }, 1200); },
                             success: function (data) {
+                                var jsonData = JSON.parse(data);
+                                console.log(jsonData);
                                 if (data != "success") {
                                     response = 'error';
                                 } else {
