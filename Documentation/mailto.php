@@ -34,11 +34,11 @@ if (isset($name, $email, $message)) {
         $phpmailer->Host = 'smtp.gmail.com';
         $phpmailer->SMTPAuth = true;
         $phpmailer->Port = 587;
-        $phpmailer->Username = 'hessalsol254@gmail.com';
-        $phpmailer->Password = 'vcexzcodvcrgwnmf';
+        $phpmailer->Username = 'hesolhes254@gmail.com';
+        $phpmailer->Password = 'tfsnnhekmpwqvioo';
         $phpmailer->setFrom($email, 'Hessal Website');
         $phpmailer->addReplyTo($email, 'Hessal Website');
-        $phpmailer->addAddress('hessalsol254@gmail.com', 'Hessal GMAIL');
+        $phpmailer->addAddress('hesolhes254@gmail.com', 'Hessal GMAIL');
         $phpmailer->addBCC('info@hessal-sol.com', 'Hessal Titan');
         $phpmailer->Subject = "Website Message";
         $exception = new Exception();
