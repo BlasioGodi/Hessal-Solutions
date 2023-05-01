@@ -54,7 +54,12 @@
   <!-- CSS Styles (Asynchronous loading - LoadCSS) -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css-2/project-carousel.css">
+
   <link id="theme" rel="stylesheet" href="assets/css/themes/theme-sans_serif-orange.css">
+  <!--Swiper StyleSheet-->
+  <link href="node_modules/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+
 </head>
 
 <body><!-- Loader -->
@@ -325,12 +330,12 @@
       </div>
     </section><!-- Section - Our Projects -->
     <section id="projects" class="section cover bg-black"><!-- Filter Bar -->
-      <nav class="filter-bar bg-background-img dark">
+      <div class="filter-bar bg-background-img dark">
         <h2 class="section-title">Our Projects<span class="selector"></span></h2>
-      </nav>
-      <div class="section-content">
-        <div class="projects-carousel js-projects-carousel js-projects-gallery">
-          <div class="project project-light"><a href="img/bg/projects/Image-14.webp"
+      </div>
+      <div class="swiper mySwiper section-content">
+        <div class="swiper-wrapper js-projects-carousel js-projects-gallery">
+          <div class="swiper-slide project project-light" style="width:18rem;"><a href="img/bg/projects/Image-14.webp"
               title="LPG Piping & Cylinders Installation">
               <figure><img src="img/bg/Image-14_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
@@ -340,7 +345,7 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project project-light"><a href="img/bg/projects/Image-9.webp"
+          <div class="swiper-slide project project-light" style="width:18rem;"><a href="img/bg/projects/Image-9.webp"
               title="LPG Piping & Cylinders Installation">
               <figure><img src="img/bg/Image-9_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
@@ -350,7 +355,8 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project"><a href="img/bg/projects/Image-12.webp" title="LPG Piping & Bulk Gas Tank Installations">
+          <div class="swiper-slide project" style="width:18rem;"><a href="img/bg/projects/Image-12.webp"
+              title="LPG Piping & Bulk Gas Tank Installations">
               <figure><img src="img/bg/Image-12_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
                   <h3 class="project-title">Vincentian<br>Retreat Centre</h3>
@@ -359,7 +365,8 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project"><a href="img/bg/projects/Image-6.webp" title="LPG Piping & Bulk Gas Tank Installations">
+          <div class="swiper-slide project" style="width:18rem;"><a href="img/bg/projects/Image-6.webp"
+              title="LPG Piping & Bulk Gas Tank Installations">
               <figure><img src="img/bg/Image-6_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
                   <h3 class="project-title">Tilak Water<br>Tank Mouldings</h3>
@@ -368,7 +375,7 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project"><a href="img/bg/projects/Photo-19.webp"
+          <div class="swiper-slide project" style="width:18rem;"><a href="img/bg/projects/Photo-19.webp"
               title="Domestic LPG Piping and Cylinder Installations">
               <figure><img src="img/bg/projects/Photo-19_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
@@ -378,7 +385,7 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project"><a href="img/bg/projects/Image-11.webp"
+          <div class="swiper-slide project " style="width:18rem;"><a href="img/bg/projects/Image-11.webp"
               title="Domestic LPG Piping and Cylinder Installations">
               <figure><img src="img/bg/Image-11_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
@@ -388,7 +395,8 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project"><a href="img/bg/projects/Image-15.webp" title="Commercial LPG Installation">
+          <div class="swiper-slide project " style="width:18rem;"><a href="img/bg/projects/Image-15.webp"
+              title="Commercial LPG Installation">
               <figure><img src="img/bg/Image-15_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
                   <h3 class="project-title">Domini<br>Pizza Inn</h3>
@@ -397,7 +405,8 @@
                 </figcaption>
               </figure>
             </a></div>
-          <div class="project"><a href="img/bg/projects/Image-13.webp" title="Commercial LPG Installation">
+          <div class="swiper-slide project " style="width:18rem;"><a href="img/bg/projects/Image-13.webp"
+              title="Commercial LPG Installation">
               <figure><img src="img/bg/Image-13_1.webp" width="640" height="360" loading="lazy" alt="">
                 <figcaption>
                   <h3 class="project-title">Chogoria<br>Hospital</h3>
@@ -418,7 +427,8 @@
           <div class="masonry-item col-sm-6 col-xs-12">
             <div class="image-box">
               <div class="image"><a aria-label="Company Team member Godfrey" data-toggle="ajax-modal"><img
-                    src="img/profile/Godfrey-01_1.webp" width="640" height="360" loading="lazy" alt=""></a></div>
+                    src="img/profile/Godfrey-01_1.webp" width="640" height="360" loading="lazy" alt="Team Member"></a>
+              </div>
               <div class="hover"><a data-toggle="ajax-modal">
                   <h4 class="mb-0">Godfrey Muhinda</h4><span class="text-muted">BIM Design Engineer</span>
                 </a></div>
@@ -428,7 +438,8 @@
           <div class="masonry-item col-sm-6 col-xs-12">
             <div class="image-box">
               <div class="image"><a aria-label="Company Team member Samuel" data-toggle="ajax-modal"><img
-                    src="img/profile/Samuel-01_1.webp" width="640" height="360" loading="lazy" alt=""></a></div>
+                    src="img/profile/Samuel-01_1.webp" width="640" height="360" loading="lazy" alt="Team Member"></a>
+              </div>
               <div class="hover"><a data-toggle="ajax-modal">
                   <h4 class="mb-0">Samuel Karanja</h4><span class="text-muted">LPG Design Engineer</span>
                 </a></div>
@@ -667,17 +678,45 @@
       class="ti-close"></i></a><!-- Ajax Loader --> <svg id="ajax-loader" class="loader" width="32px" height="32px"
     viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
     <circle class="circle" fill="none" stroke-width="5" stroke-linecap="round" cx="32" cy="32" r="32"></circle>
-  </svg><!-- JS Libraries -->
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script><!-- JS Plugins -->
-  <script src="assets/js/plugins.js"></script><!-- JS Core -->
-  <script src="assets/js/core.js"></script><!-- SCRIPTS -->
+  </svg>
+
+  <!-- CORE SCRIPTS -->
+  <script src="assets/js-2/jquery.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/core.js"></script>
+  <!-- EXTENSIONS -->
+  <script src="assets/js-2/bootstrap.min.js"></script>
   <script src="assets/js-2/jquery.validate.min.js"></script>
   <script src="assets/js-2/wow.min.js"></script>
   <script src="assets/js-2/jquery.stellar.min.js"></script>
   <script src="assets/js-2/jquery.magnific-popup.js"></script>
-  <script src="assets/js-2/interface.js"></script>
+  <script src="assets/js-2/owl.carousel.min.js"></script>
+  <script src="assets/js-2/interface-2.js"></script>
+  <!-- PLUGINS -->
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+
+
+  <script>
+    // Swiper Initialization
+    var swiper = new Swiper(".mySwiper", {
+      initialSlide: 3,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 40,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>

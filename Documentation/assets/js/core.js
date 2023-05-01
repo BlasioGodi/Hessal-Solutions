@@ -595,9 +595,7 @@ var Sukces = {
                             error: function (err) { setTimeout(function () { $btn.addClass('error'); }, 1200); },
                             success: function (responseText) {
                                 var funcResponse = responseText.trim();
-                                console.log(funcResponse);
                                 var match = funcResponse.match(/success/i);
-                                console.log(match);
                                 if (match !== null) {
                                     response = 'success';
                                 } else {
@@ -606,7 +604,6 @@ var Sukces = {
                                 setTimeout(function () {
                                     $btn.addClass(response);
                                 }, 400);
-                                console.log("Response: ", response);
                             },
                             complete: function (data) {
                                 setTimeout(function () {
